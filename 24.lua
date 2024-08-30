@@ -4,9 +4,9 @@ local livecodeplugin = loadstring(game:HttpGet("https://raw.githubusercontent.co
 Iris:Connect(function()
     local windowSize = Iris.State(Vector2.new(275, 128))
 
-    Iris.Window({"ForceField \ LiveCode"}, {size = windowSize})
+    Iris.Window({"LiveCode"}, {size = windowSize})
         Iris.Group()
-        Iris.Text({"This is an plugin to LiveCode."})
+        Iris.Text({"This is an plugin from LiveCode."})
         Iris.Text({"For Executing code directly."})
         Iris.Separator()
         Iris.Group()
