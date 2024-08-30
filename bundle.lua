@@ -1,3 +1,4 @@
+-- local Iris = loadstring(game:HttpGet("https://raw.githubusercontent.com/x0581/Iris-Exploit-Bundle/2.0.4/bundle.lua"))().Init(game.CoreGui)
 local __bundle_require, __bundle_loaded, __bundle_register, __bundle_modules = (function(superRequire)
 	local loadingPlaceholder = {[{}] = true}
 
