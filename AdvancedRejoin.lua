@@ -1,17 +1,28 @@
-local Iris = loadstring(game:HttpGet("https://raw.githubusercontent.com/ProyectFF/FFValues/main/bundle.lua"))().Init(game.CoreGui)
+local Iris = loadstring(game:HttpGet("https://raw.githubusercontent.com/x0581/Iris-Exploit-Bundle/2.0.4/bundle.lua"))().Init(game.CoreGui)
 
 Iris:Connect(function()
-    Iris.Window({"ForceField - Rejoin"})
-        Iris.Text({"Are you Sure do you want to rejoin?"})
-        Iris.Sameline()
-    
-       local rejoin1 = Iris.Button({"Yes, Rejoin."})
-       local rejoin2 = Iris.Button({"Yes, Rejoin but kill me before."})
-       local rejoin3 = Iris.Button({"Yes, Rejoin but kick me before."})
-       local rejoin4 = Iris.Button({"Yes, Rejoin but kill and kick me before."})
-       local no1 = Iris.Button({"No."})
-       if no1.clicked() then
-          print("TEST")
-       end
+    local windowSize = Iris.State(Vector2.new(275, 128))
+
+    Iris.Window({"ForceField - Rejoin"}, {size = windowSize})
+        Iris.Group()
+        Iris.Text({"Are you Sure to Rejoin?"})
+        Iris.Text({"You cannot rejoin on Priv & Reserved."})
+        Iris.Separator()
+        Iris.Group()
+        Iris.SameLine()
+        local Yes1 = Iris.Button({"Yes"})
+        local Leave1 = Iris.Button({"Leave Game."})
+        local No1 = Iris.Button({"No"})
+        if Yes1.clicked() then
+            game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+        end
+
+        if No1.clicked() then
+            print("Error")
+        end
+
+        if Leave1.clicked() then
+            game.Shutdown()
+        end
     Iris.End()
 end)
